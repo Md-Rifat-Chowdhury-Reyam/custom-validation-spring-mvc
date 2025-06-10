@@ -1,12 +1,12 @@
+<%--@elvariable id="Ref" type="com.foodhut"--%>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
-<!DOCTYPE html>
 <html>
+<head>
+    <title>Welcome</title>
+</head>
 <body>
-<%--@elvariable id="studentRef" type="com.foodhut"--%>
-<div>
-    <h2>Welcome ${studentRef.name} to Student portal<br><br>
-        Your Roll Number is ${studentRef.roll} and you live in Bangladesh.</h2>
-</div>
+<h2>Welcome ${Ref.name} to Student portal<br><br>
+    Your Roll Number is ${Ref.roll}.</h2>
 </body>
 </html>

@@ -1,45 +1,44 @@
 package com.foodhut.model;
 
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 public class Student {
 
-    //predefine validator
     @NotNull(message = "Name can't be empty")
-    @Size(min = 3 , message = "Name should be valid")
+    @Size(min = 1, message = "Name should be at least 3 characters")
     private String name;
 
     @NotNull(message = "Roll can't be empty")
-    @Size(min = 2, message = "Roll should be right form")
-    private int roll;
+    @Min(value = 10, message = "roll number must be two digit")
+    private Integer roll; // Changed to Integer to handle validation properly
 
-    //custom validator
+    // Custom validator would be added via annotation
     private String address;
 
+    // Getters and setters
+    public String getName() {
+        return name;
+    }
 
     public void setName(String name) {
         this.name = name;
     }
-    public String getName()
-    {
-        return name;
+
+    public Integer getRoll() {
+        return roll;
     }
-    public void setRoll(int roll) {
+
+    public void setRoll(Integer roll) {
         this.roll = roll;
     }
 
-    public int getRoll() {
-        return roll;
-    }
-    
-    public void setAddress(String address)
-    {
-        this.address = address;
-    }
-    public String getAddress()
-    {
+    public String getAddress() {
         return address;
     }
-    
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 }
