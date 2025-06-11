@@ -23,6 +23,10 @@
     <form:input path="roll" />
     <form:errors path="roll" cssClass="error" /><br><br>
 
+    <label>Address</label>
+    <form:input path="address" />
+    <form:errors path = "address" cssClass="error" /> <br><br>
+
     <input type="submit" value="Submit" />
 </form:form>
 </body>
